@@ -20,17 +20,11 @@ public int lastIndexOf(int value){
     int index = -1;
     if(current == null){
         return -1;
-    }
-    if(current.data == value){
-        return 0;
-    }
-    while(current.next != null){            
+    }  
+    while(current != null){            
         if(current.data == value){
             index = temp;
-        }
-        if(current.next == null){
-            return index;
-        }
+        }       
         temp++; 
         current = current.next;
     }
